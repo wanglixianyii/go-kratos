@@ -56,8 +56,9 @@ generate:
 	go get github.com/google/wire/cmd/wire@latest
 	go generate ./...
 
-
-
+.PHONY: wire
+wire:
+	cd cmd/authority/ && wire
 
 .PHONY: all
 # generate all
@@ -65,6 +66,7 @@ all:
 	make api;
 	make config;
 	make generate;
+	make wire;
 
 # show help
 help:

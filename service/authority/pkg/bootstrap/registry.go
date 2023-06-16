@@ -3,8 +3,8 @@ package bootstrap
 import (
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/registry"
+	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf"
 	"path/filepath"
-	"user-job/internal/conf"
 
 	// etcd
 	etcdKratos "github.com/go-kratos/kratos/contrib/registry/etcd/v2"

@@ -1,0 +1,2 @@
+{"level":"INFO","time":"2023-06-16T15:42:47.306+0800","msg":"","service.id":"SK-20220830LJZB","service.name":"go-kratos.rpc-authority.service","service.version":"1.0.0","caller":"grpc/server.go:205","trace_id":"","span_id":"","msg":"[gRPC] server listening on: [::]:6020"}
+{"level":"INFO","time":"2023-06-16T15:42:58.101+0800","msg":"","service.id":"SK-20220830LJZB","service.name":"go-kratos.rpc-authority.service","service.version":"1.0.0","caller":"grpc/server.go:217","trace_id":"","span_id":"","msg":"[gRPC] server stopping"}

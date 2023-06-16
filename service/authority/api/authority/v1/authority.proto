@@ -34,7 +34,6 @@ message MenuInfo {
   string title = 3;
   string icon = 4;
   string path = 5;
-  string component = 6;
   string permission = 8; // 权限标识
   int32 type = 9;     // 类型：0菜单 1节点
   string method = 10;     // 请求方式
@@ -57,7 +56,6 @@ message CreateMenuReq {
   string title = 2;
   string icon = 3;
   string path = 4;
-  string component = 5;
   string permission = 7;
   int32 type = 8;
   int32 status = 9;
@@ -77,7 +75,7 @@ message UpdateMenuReq {
   string title = 2;
   string icon = 3;
   string path = 4;
-  string component = 5;
+
   string permission = 7;
   int32 type = 8;
   int32 status = 9;

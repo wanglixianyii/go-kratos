@@ -2,6 +2,7 @@ package bootstrap
 
 import (
 	"errors"
+	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/exporters/jaeger"

@@ -6,28 +6,27 @@ import (
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/biz"
 	"gorm.io/gorm"
-	"time"
 )
 
 // Menu is the golang structure for table sys_menu.
 type Menu struct {
-	Id         int64      `orm:"id,primary"  json:"id"`         // 主键ID
-	ParentId   int64      `orm:"parent_id"   json:"parentId"`   // 父级ID
-	Title      string     `orm:"title"       json:"title"`      // 菜单标题
-	Icon       string     `orm:"icon"        json:"icon"`       // 图标
-	Path       string     `orm:"path"        json:"path"`       // 菜单路径
-	Component  string     `orm:"component"   json:"component"`  // 菜单组件
-	Permission string     `orm:"permission"  json:"permission"` // 权限标识
-	Type       int32      `orm:"type"        json:"type"`       // 类型：0 菜单 1 节点
-	Method     string     `orm:"method"      json:"method"`     // 请求方式
-	Status     int32      `orm:"status"      json:"status"`     // 状态：1正常 2禁用
-	Hide       int32      `orm:"hide"        json:"hide"`       // 是否可见：1是 2否
-	Note       string     `orm:"note"        json:"note"`       // 备注
-	Sort       int32      `orm:"sort"        json:"sort"`       // 显示顺序
-	CreateUser int64      `orm:"create_user" json:"createUser"` // 添加人
-	CreateTime *time.Time `orm:"create_time" json:"createTime"` // 创建时间
-	UpdateUser int64      `orm:"update_user" json:"updateUser"` // 更新人
-	UpdateTime *time.Time `orm:"update_time" json:"updateTime"` // 更新时间
+	Id       int64  `orm:"id,primary"  json:"id"`       // 主键ID
+	ParentId int64  `orm:"parent_id"   json:"parentId"` // 父级ID
+	Title    string `orm:"title"       json:"title"`    // 菜单标题
+	Icon     string `orm:"icon"        json:"icon"`     // 图标
+	Path     string `orm:"path"        json:"path"`     // 菜单路径
+
+	Permission string `orm:"permission"  json:"permission"` // 权限标识
+	Type       int32  `orm:"type"        json:"type"`       // 类型：0 菜单 1 节点
+	Method     string `orm:"method"      json:"method"`     // 请求方式
+	Status     int32  `orm:"status"      json:"status"`     // 状态：1正常 2禁用
+	Hide       int32  `orm:"hide"        json:"hide"`       // 是否可见：1是 2否
+	Note       string `orm:"note"        json:"note"`       // 备注
+	Sort       int32  `orm:"sort"        json:"sort"`       // 显示顺序
+	CreateUser int64  `orm:"create_user" json:"createUser"` // 添加人
+	CreateTime int64  `orm:"create_time" json:"createTime"` // 创建时间
+	UpdateUser int64  `orm:"update_user" json:"updateUser"` // 更新人
+	UpdateTime int64  `orm:"update_time" json:"updateTime"` // 更新时间
 
 }
 
