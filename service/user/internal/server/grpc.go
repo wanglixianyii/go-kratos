@@ -5,15 +5,14 @@ import (
 	"github.com/go-kratos/kratos/v2/middleware/metrics"
 	"github.com/go-kratos/kratos/v2/middleware/tracing"
 	"github.com/prometheus/client_golang/prometheus"
+	v1 "github.com/wanglixianyii/go-kratos/user-rpc/api/user/v1"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/conf"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/service"
 
 	prom "github.com/go-kratos/kratos/contrib/metrics/prometheus/v2"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
-
-	v1 "user-api/api/user-api/v1"
-	"user/internal/conf"
-	"user/internal/service"
 )
 
 // NewGRPCServer new a gRPC server.

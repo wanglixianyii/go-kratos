@@ -1,20 +1,19 @@
 //go:build wireinject
 // +build wireinject
 
-// The build tag makes sure the stub is not built in the final build.
+//The build tag makes sure the stub is not built in the final build.
 
 package main
 
 import (
-	"user/internal/biz"
-	"user/internal/conf"
-	"user/internal/data"
-	"user/internal/server"
-	"user/internal/service"
-
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/biz"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/conf"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/data"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/server"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/service"
 )
 
 // wireApp init kratos application.

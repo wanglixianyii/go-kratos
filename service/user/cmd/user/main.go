@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/conf"
 	"os"
 
 	"github.com/go-kratos/kratos/v2"
@@ -17,8 +18,6 @@ import (
 	"go.opentelemetry.io/otel/sdk/resource"
 	traceSdk "go.opentelemetry.io/otel/sdk/trace"
 	semconv "go.opentelemetry.io/otel/semconv/v1.4.0"
-
-	"user/internal/conf"
 
 	_ "go.uber.org/automaxprocs"
 )

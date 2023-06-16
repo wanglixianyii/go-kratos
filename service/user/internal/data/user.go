@@ -4,13 +4,12 @@ import (
 	"context"
 	"github.com/go-kratos/kratos/v2/errors"
 	"github.com/jinzhu/copier"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/biz"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/pkg/encryption"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"gorm.io/gorm"
 	"time"
-
-	"user/internal/biz"
-	"user/internal/pkg/encryption"
 
 	"github.com/go-kratos/kratos/v2/log"
 )

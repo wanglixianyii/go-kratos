@@ -4,14 +4,13 @@ import (
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/jinzhu/copier"
+	v1 "github.com/wanglixianyii/go-kratos/user-rpc/api/user/v1"
+	"github.com/wanglixianyii/go-kratos/user-rpc/internal/biz"
 	"go.opentelemetry.io/otel"
-	"user/internal/biz"
-
-	pb "user-api/api/user-api/v1"
 )
 
 type UserService struct {
-	pb.UnimplementedUserServer
+	v1.UnimplementedUserServer
 	uc  *biz.UserUseCase
 	log *log.Helper
 }
@@ -20,7 +19,7 @@ func NewUserService(uc *biz.UserUseCase, logger log.Logger) *UserService {
 	return &UserService{uc: uc, log: log.NewHelper(logger)}
 }
 
-func (s *UserService) CreateUser(ctx context.Context, req *pb.CreateUserReq) (*pb.UserInfoResp, error) {
+func (s *UserService) CreateUser(ctx context.Context, req *v1.CreateUserReq) (*v1.UserInfoResp, error) {
 	user, err := s.uc.Create(ctx, &biz.User{
 		Mobile:   req.Mobile,
 		Password: req.Password,
@@ -30,7 +29,7 @@ func (s *UserService) CreateUser(ctx context.Context, req *pb.CreateUserReq) (*p
 		return nil, err
 	}
 
-	userInfoRsp := pb.UserInfoResp{
+	userInfoRsp := v1.UserInfoResp{
 		Id:       user.Id,
 		Mobile:   user.Mobile,
 		Password: user.Password,
@@ -40,7 +39,7 @@ func (s *UserService) CreateUser(ctx context.Context, req *pb.CreateUserReq) (*p
 
 	return &userInfoRsp, nil
 }
-func (s *UserService) CheckPassword(ctx context.Context, req *pb.CheckPasswordReq) (*pb.CheckPasswordResp, error) {
+func (s *UserService) CheckPassword(ctx context.Context, req *v1.CheckPasswordReq) (*v1.CheckPasswordResp, error) {
 
 	tr := otel.Tracer("service")
 	ctx, span := tr.Start(ctx, "check user-api  password")
@@ -49,10 +48,10 @@ func (s *UserService) CheckPassword(ctx context.Context, req *pb.CheckPasswordRe
 	if err != nil {
 		return nil, err
 	}
-	return &pb.CheckPasswordResp{Success: check}, nil
+	return &v1.CheckPasswordResp{Success: check}, nil
 
 }
-func (s *UserService) GetUserByMobile(ctx context.Context, req *pb.MobileReq) (*pb.UserInfoResp, error) {
+func (s *UserService) GetUserByMobile(ctx context.Context, req *v1.MobileReq) (*v1.UserInfoResp, error) {
 	tr := otel.Tracer("service")
 	ctx, span := tr.Start(ctx, "get user-api list")
 	defer span.End()
@@ -60,14 +59,14 @@ func (s *UserService) GetUserByMobile(ctx context.Context, req *pb.MobileReq) (*
 	if err != nil {
 		return nil, err
 	}
-	var resp pb.UserInfoResp
+	var resp v1.UserInfoResp
 	err = copier.Copy(&resp, user)
 	if err != nil {
 		return nil, err
 	}
 	return &resp, nil
 }
-func (s *UserService) GetUserByUsername(ctx context.Context, req *pb.UsernameReq) (*pb.UserInfoResp, error) {
+func (s *UserService) GetUserByUsername(ctx context.Context, req *v1.UsernameReq) (*v1.UserInfoResp, error) {
 	tr := otel.Tracer("service")
 	ctx, span := tr.Start(ctx, "get user-api info by Id")
 	defer span.End()
@@ -75,14 +74,14 @@ func (s *UserService) GetUserByUsername(ctx context.Context, req *pb.UsernameReq
 	if err != nil {
 		return nil, err
 	}
-	var resp pb.UserInfoResp
+	var resp v1.UserInfoResp
 	err = copier.Copy(&resp, user)
 	if err != nil {
 		return nil, err
 	}
 	return &resp, nil
 }
-func (s *UserService) GetUserById(ctx context.Context, req *pb.IdReq) (*pb.UserInfoResp, error) {
+func (s *UserService) GetUserById(ctx context.Context, req *v1.IdReq) (*v1.UserInfoResp, error) {
 	//tr := otel.Tracer("service")
 	//ctx, span := tr.Start(ctx, "get user-api info by Id")
 	//defer span.End()
@@ -96,8 +95,8 @@ func (s *UserService) GetUserById(ctx context.Context, req *pb.IdReq) (*pb.UserI
 	return &rsp, nil
 }
 
-func UserResponse(user *biz.User) pb.UserInfoResp {
-	userInfoRsp := pb.UserInfoResp{
+func UserResponse(user *biz.User) v1.UserInfoResp {
+	userInfoRsp := v1.UserInfoResp{
 		Id:       user.Id,
 		Mobile:   user.Mobile,
 		Password: user.Password,

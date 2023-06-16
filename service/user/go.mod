@@ -1,4 +1,4 @@
-module github.com/wanglixianyii/go-kratos/rpc-user
+module github.com/wanglixianyii/go-kratos/user-rpc
 
 go 1.20
 
