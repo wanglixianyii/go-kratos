@@ -1,0 +1,20 @@
+server:
+  http:
+    addr: 0.0.0.0:5010
+    timeout: 1s
+  grpc:
+    addr: 0.0.0.0:6010
+    timeout: 1s
+data:
+  database:
+    driver: mysql
+    source: root:root@tcp(127.0.0.1:3306)/shop_user?charset=utf8mb4&parseTime=True&loc=Local
+  redis:
+    addr: 101.42.237.244:6379
+    dial_timeout: 2s
+    read_timeout: 2s
+    write_timeout: 2s
+trace:
+  endpoint: http://101.42.237.244:14268/api/traces
+auth:
+  jwt_key: hqFr%3ddt32DGlSTOI5cO6@TH#fFwYnP$S

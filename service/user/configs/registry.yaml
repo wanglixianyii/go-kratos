@@ -1,0 +1,7 @@
+consul:
+  address: 101.42.237.244:8500
+  scheme: http
+etcd:
+  endpoints:
+    - 101.42.237.244:20006
+  dial-timeout: 5

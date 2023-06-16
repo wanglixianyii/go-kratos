@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package authority.conf;
+
+import "google/protobuf/duration.proto";
+
+option go_package = "github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf;conf";
+
+// 服务器
+message Server {
+
+  message GRPC {
+    string network = 1;
+    string addr = 2;
+    google.protobuf.Duration timeout = 3;
+  }
+  GRPC grpc = 1;
+}

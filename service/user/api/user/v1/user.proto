@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package api.user.v1;
+
+option go_package = "user/api/user/v1;v1";
+
+service User {
+
+	rpc CreateUser(CreateUserReq) returns (UserInfoResp){}; // 创建用户
+	rpc CheckPassword(CheckPasswordReq) returns (CheckPasswordResp){}; // 检查用户密码
+	rpc GetUserByMobile(MobileReq) returns (UserInfoResp){}; // 通过 mobile 查询用户
+	rpc GetUserByUsername(UsernameReq) returns (UserInfoResp){}; // 通过 mobile 查询用户
+	rpc GetUserById(IdReq) returns (UserInfoResp){}; // 通过 Id 查询用户
+
+}
+
+// 创建用户
+message  CreateUserReq{
+	string username = 1;
+	string password = 2;
+	string mobile = 3;
+}
+
+// 根据手机号获取用户信息
+message MobileReq {
+	string mobile = 1;
+}
+
+// 根据用户名获取用户信息
+message UsernameReq {
+	string username = 1;
+}
+
+// 根据id获取用户信息
+message IdReq{
+	int64 id = 1;
+}
+
+// 用户信息
+message UserInfoResp{
+	int64 id = 1;
+	string password = 2;
+	string mobile = 3;
+	string username = 4;
+	int64 gender = 5;
+	int64 AvatarId = 6;
+}
+
+message CheckPasswordReq{
+	string password = 1;
+	string encryptedPassword = 2;
+}
+
+message CheckPasswordResp{
+	bool success = 1;
+}
+
+
