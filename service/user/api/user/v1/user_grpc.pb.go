@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             v3.19.4
-// source: user/v1/user.proto
+// source: user-api/v1/user-api.proto
 
 package v1
 
@@ -19,11 +19,11 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	User_CreateUser_FullMethodName        = "/api.user.v1.User/CreateUser"
-	User_CheckPassword_FullMethodName     = "/api.user.v1.User/CheckPassword"
-	User_GetUserByMobile_FullMethodName   = "/api.user.v1.User/GetUserByMobile"
-	User_GetUserByUsername_FullMethodName = "/api.user.v1.User/GetUserByUsername"
-	User_GetUserById_FullMethodName       = "/api.user.v1.User/GetUserById"
+	User_CreateUser_FullMethodName        = "/api.user-api.v1.User/CreateUser"
+	User_CheckPassword_FullMethodName     = "/api.user-api.v1.User/CheckPassword"
+	User_GetUserByMobile_FullMethodName   = "/api.user-api.v1.User/GetUserByMobile"
+	User_GetUserByUsername_FullMethodName = "/api.user-api.v1.User/GetUserByUsername"
+	User_GetUserById_FullMethodName       = "/api.user-api.v1.User/GetUserById"
 )
 
 // UserClient is the client API for User service.
@@ -228,7 +228,7 @@ func _User_GetUserById_Handler(srv interface{}, ctx context.Context, dec func(in
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var User_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "api.user.v1.User",
+	ServiceName: "api.user-api.v1.User",
 	HandlerType: (*UserServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -253,5 +253,5 @@ var User_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "user/v1/user.proto",
+	Metadata: "user-api/v1/user-api.proto",
 }

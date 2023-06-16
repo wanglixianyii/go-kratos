@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package job.v1;
+
+option go_package = "user-api-job/api/job/v1;v1";
+
+service Job {
+}
+
+message IdReq {
+  int64 id = 1;
+}

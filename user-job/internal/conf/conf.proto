@@ -1,0 +1,25 @@
+syntax = "proto3";
+package user.job.conf;
+
+option go_package = "user-api-job/internal/conf;conf";
+
+import "conf/logger.proto";
+import "conf/registry.proto";
+import "conf/tracer.proto";
+import "conf/server.proto";
+import "conf/data.proto";
+
+message Bootstrap {
+  Server server = 1;
+  Data data = 2;
+  Tracer tracer = 3;
+  Logger logger = 4;
+  Registry registry = 5;
+}
+
+
+
+
+
+
+

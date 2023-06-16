@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package api.user.v1;
 
-option go_package = "user/api/user/v1;v1";
+option go_package = "user-api/api/user-api/v1;v1";
 
 service User {
 

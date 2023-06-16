@@ -1,27 +1,25 @@
-module user
+module github.com/wanglixianyii/go-kratos/rpc-user
 
 go 1.20
 
-replace google.golang.org/grpc => google.golang.org/grpc v1.44.0
+replace google.golang.org/grpc => google.golang.org/grpc v1.54.0
 
 require (
-	github.com/go-kratos/kratos/contrib/metrics/prometheus/v2 v2.0.0-20230519061918-96480c11ee42
-	github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230519061918-96480c11ee42
+	github.com/go-kratos/kratos/contrib/metrics/prometheus/v2 v2.0.0-20230616090408-32c0d2dd97e2
+	github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616090408-32c0d2dd97e2
 	github.com/go-kratos/kratos/v2 v2.6.2
 	github.com/go-redis/redis/extra/redisotel v0.3.0
 	github.com/go-redis/redis/v8 v8.11.5
-	github.com/golang-jwt/jwt/v4 v4.5.0
 	github.com/google/wire v0.5.0
-	github.com/gorilla/handlers v1.5.1
-	github.com/hashicorp/consul/api v1.20.0
+	github.com/hashicorp/consul/api v1.21.0
 	github.com/jinzhu/copier v0.3.5
-	github.com/prometheus/client_golang v1.15.1
+	github.com/prometheus/client_golang v1.16.0
 	go.opentelemetry.io/otel v1.16.0
 	go.opentelemetry.io/otel/exporters/jaeger v1.16.0
 	go.opentelemetry.io/otel/sdk v1.16.0
 	go.uber.org/automaxprocs v1.5.2
-	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519
-	google.golang.org/grpc v1.54.0
+	golang.org/x/crypto v0.10.0
+	google.golang.org/grpc v1.51.0
 	google.golang.org/protobuf v1.30.0
 	gorm.io/driver/mysql v1.5.1
 	gorm.io/gorm v1.25.1
@@ -33,7 +31,6 @@ require (
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/fatih/color v1.9.0 // indirect
-	github.com/felixge/httpsnoop v1.0.1 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/go-kratos/aegis v0.2.0 // indirect
 	github.com/go-logr/logr v1.2.4 // indirect
@@ -60,13 +57,13 @@ require (
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.42.0 // indirect
-	github.com/prometheus/procfs v0.9.0 // indirect
+	github.com/prometheus/procfs v0.10.1 // indirect
 	go.opentelemetry.io/otel/metric v1.16.0 // indirect
 	go.opentelemetry.io/otel/trace v1.16.0 // indirect
-	golang.org/x/net v0.8.0 // indirect
-	golang.org/x/sync v0.1.0 // indirect
-	golang.org/x/sys v0.8.0 // indirect
-	golang.org/x/text v0.8.0 // indirect
-	google.golang.org/genproto v0.0.0-20230524185152-1884fd1fac28 // indirect
+	golang.org/x/net v0.10.0 // indirect
+	golang.org/x/sync v0.2.0 // indirect
+	golang.org/x/sys v0.9.0 // indirect
+	golang.org/x/text v0.10.0 // indirect
+	google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

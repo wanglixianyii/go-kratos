@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package api.kafka.v1;
+
+option go_package = "user-api/api/job/v1;v1";
+
+service Logger {
+    rpc ListSensor(ListSensorReq) returns (ListSensorReply){};
+
+}
+
+message ListSensorReq{
+    int32 page =1;
+    int32 pageSize =2;
+}
+
+message ListSensorReply {
+ repeated Sensor result =1;
+}
+
+message Sensor {
+    int64 id = 1;
+    string type = 2;
+    string location = 3;
+}
+

@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package user.job.conf;
+
+option go_package = "user-api-job/internal/conf;conf";
+
+import "google/protobuf/duration.proto";
+import "conf/middleware.proto";
+
+// 服务器
+message Server {
+
+  // gPRC
+  message GRPC {
+    string network = 1; // 网络
+    string addr = 2;  // 服务监听地址
+    google.protobuf.Duration timeout = 3; // 超时时间
+    Middleware middleware = 4;
+  }
+
+//  // Kafka
+//  message Kafka {
+//    repeated string addrs = 1;  // 对端网络地址
+//  }
+//
+//  // RabbitMQ
+//  message RabbitMQ {
+//    repeated string addrs = 1;  // 对端网络地址
+//  }
+
+  // RabbitMQ
+  message RocketMQ {
+    repeated string addrs = 1;  // 对端网络地址
+  }
+
+  GRPC grpc = 1;  // gRPC服务
+//  Kafka kafka = 2;  // Kafka服务
+//  RabbitMQ rabbitmq = 3;  // RabbitMQ服务
+  RocketMQ rocketmq = 4;  // RocketMQ服务
+
+}

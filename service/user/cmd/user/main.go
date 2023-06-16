@@ -26,7 +26,7 @@ import (
 // go build -ldflags "-X main.Version=x.y.z"
 var (
 	// Name is the name of the compiled software.
-	Name = "kratos-shop.user.service"
+	Name = "kratos-shop.user-api.service"
 	// Version is the version of the compiled software.
 	Version = "v1"
 	// flagConf is the config flag.
@@ -41,7 +41,7 @@ func init() {
 
 func newApp(logger log.Logger, gs *grpc.Server, rr registry.Registrar) *kratos.App {
 	return kratos.New(
-		kratos.ID(id+"user service"),
+		kratos.ID(id+"user-api service"),
 		kratos.Name(Name),
 		kratos.Version(Version),
 		kratos.Metadata(map[string]string{}),

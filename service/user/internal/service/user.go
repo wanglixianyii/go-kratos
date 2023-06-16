@@ -7,7 +7,7 @@ import (
 	"go.opentelemetry.io/otel"
 	"user/internal/biz"
 
-	pb "user/api/user/v1"
+	pb "user-api/api/user-api/v1"
 )
 
 type UserService struct {
@@ -43,7 +43,7 @@ func (s *UserService) CreateUser(ctx context.Context, req *pb.CreateUserReq) (*p
 func (s *UserService) CheckPassword(ctx context.Context, req *pb.CheckPasswordReq) (*pb.CheckPasswordResp, error) {
 
 	tr := otel.Tracer("service")
-	ctx, span := tr.Start(ctx, "check user  password")
+	ctx, span := tr.Start(ctx, "check user-api  password")
 	defer span.End()
 	check, err := s.uc.CheckPassword(ctx, req.Password, req.EncryptedPassword)
 	if err != nil {
@@ -54,7 +54,7 @@ func (s *UserService) CheckPassword(ctx context.Context, req *pb.CheckPasswordRe
 }
 func (s *UserService) GetUserByMobile(ctx context.Context, req *pb.MobileReq) (*pb.UserInfoResp, error) {
 	tr := otel.Tracer("service")
-	ctx, span := tr.Start(ctx, "get user list")
+	ctx, span := tr.Start(ctx, "get user-api list")
 	defer span.End()
 	user, err := s.uc.UserByMobile(ctx, req.Mobile)
 	if err != nil {
@@ -69,7 +69,7 @@ func (s *UserService) GetUserByMobile(ctx context.Context, req *pb.MobileReq) (*
 }
 func (s *UserService) GetUserByUsername(ctx context.Context, req *pb.UsernameReq) (*pb.UserInfoResp, error) {
 	tr := otel.Tracer("service")
-	ctx, span := tr.Start(ctx, "get user info by Id")
+	ctx, span := tr.Start(ctx, "get user-api info by Id")
 	defer span.End()
 	user, err := s.uc.UserByUsername(ctx, req.Username)
 	if err != nil {
@@ -84,7 +84,7 @@ func (s *UserService) GetUserByUsername(ctx context.Context, req *pb.UsernameReq
 }
 func (s *UserService) GetUserById(ctx context.Context, req *pb.IdReq) (*pb.UserInfoResp, error) {
 	//tr := otel.Tracer("service")
-	//ctx, span := tr.Start(ctx, "get user info by Id")
+	//ctx, span := tr.Start(ctx, "get user-api info by Id")
 	//defer span.End()
 	user, err := s.uc.UserById(ctx, req.Id)
 	if err != nil {

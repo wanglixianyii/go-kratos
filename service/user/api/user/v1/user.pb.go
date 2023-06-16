@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.30.0
 // 	protoc        v3.19.4
-// source: user/v1/user.proto
+// source: user-api/v1/user-api.proto
 
 package v1
 
@@ -497,25 +497,25 @@ func file_user_v1_user_proto_rawDescGZIP() []byte {
 
 var file_user_v1_user_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_user_v1_user_proto_goTypes = []interface{}{
-	(*CreateUserReq)(nil),     // 0: api.user.v1.CreateUserReq
-	(*MobileReq)(nil),         // 1: api.user.v1.MobileReq
-	(*UsernameReq)(nil),       // 2: api.user.v1.UsernameReq
-	(*IdReq)(nil),             // 3: api.user.v1.IdReq
-	(*UserInfoResp)(nil),      // 4: api.user.v1.UserInfoResp
-	(*CheckPasswordReq)(nil),  // 5: api.user.v1.CheckPasswordReq
-	(*CheckPasswordResp)(nil), // 6: api.user.v1.CheckPasswordResp
+	(*CreateUserReq)(nil),     // 0: api.user-api.v1.CreateUserReq
+	(*MobileReq)(nil),         // 1: api.user-api.v1.MobileReq
+	(*UsernameReq)(nil),       // 2: api.user-api.v1.UsernameReq
+	(*IdReq)(nil),             // 3: api.user-api.v1.IdReq
+	(*UserInfoResp)(nil),      // 4: api.user-api.v1.UserInfoResp
+	(*CheckPasswordReq)(nil),  // 5: api.user-api.v1.CheckPasswordReq
+	(*CheckPasswordResp)(nil), // 6: api.user-api.v1.CheckPasswordResp
 }
 var file_user_v1_user_proto_depIdxs = []int32{
-	0, // 0: api.user.v1.User.CreateUser:input_type -> api.user.v1.CreateUserReq
-	5, // 1: api.user.v1.User.CheckPassword:input_type -> api.user.v1.CheckPasswordReq
-	1, // 2: api.user.v1.User.GetUserByMobile:input_type -> api.user.v1.MobileReq
-	2, // 3: api.user.v1.User.GetUserByUsername:input_type -> api.user.v1.UsernameReq
-	3, // 4: api.user.v1.User.GetUserById:input_type -> api.user.v1.IdReq
-	4, // 5: api.user.v1.User.CreateUser:output_type -> api.user.v1.UserInfoResp
-	6, // 6: api.user.v1.User.CheckPassword:output_type -> api.user.v1.CheckPasswordResp
-	4, // 7: api.user.v1.User.GetUserByMobile:output_type -> api.user.v1.UserInfoResp
-	4, // 8: api.user.v1.User.GetUserByUsername:output_type -> api.user.v1.UserInfoResp
-	4, // 9: api.user.v1.User.GetUserById:output_type -> api.user.v1.UserInfoResp
+	0, // 0: api.user-api.v1.User.CreateUser:input_type -> api.user-api.v1.CreateUserReq
+	5, // 1: api.user-api.v1.User.CheckPassword:input_type -> api.user-api.v1.CheckPasswordReq
+	1, // 2: api.user-api.v1.User.GetUserByMobile:input_type -> api.user-api.v1.MobileReq
+	2, // 3: api.user-api.v1.User.GetUserByUsername:input_type -> api.user-api.v1.UsernameReq
+	3, // 4: api.user-api.v1.User.GetUserById:input_type -> api.user-api.v1.IdReq
+	4, // 5: api.user-api.v1.User.CreateUser:output_type -> api.user-api.v1.UserInfoResp
+	6, // 6: api.user-api.v1.User.CheckPassword:output_type -> api.user-api.v1.CheckPasswordResp
+	4, // 7: api.user-api.v1.User.GetUserByMobile:output_type -> api.user-api.v1.UserInfoResp
+	4, // 8: api.user-api.v1.User.GetUserByUsername:output_type -> api.user-api.v1.UserInfoResp
+	4, // 9: api.user-api.v1.User.GetUserById:output_type -> api.user-api.v1.UserInfoResp
 	5, // [5:10] is the sub-list for method output_type
 	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name

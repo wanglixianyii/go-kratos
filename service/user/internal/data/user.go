@@ -28,7 +28,7 @@ type User struct {
 }
 
 func (User) TableName() string {
-	return "user"
+	return "user-api"
 }
 
 type userRepo struct {
@@ -132,7 +132,7 @@ func (r *userRepo) GetUserByUsername(ctx context.Context, username string) (*biz
 	return &re, nil
 }
 
-// ModelToResponse 转换 user 表中所有字段的值
+// ModelToResponse 转换 user-api 表中所有字段的值
 func modelToResponse(user User) biz.User {
 	userInfoRsp := biz.User{
 		Id:       user.Id,

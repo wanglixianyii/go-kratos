@@ -1,0 +1,23 @@
+name: user-api.job
+server:
+  grpc:
+    addr: 0.0.0.0:9903
+    timeout: 1s
+  rocketmq:
+    addrs:
+      - 101.42.237.244:9876
+data:
+  database:
+    driver: mysql
+    source: root:root@tcp(127.0.0.1:3306)/shop_user?charset=utf8mb4&parseTime=True&loc=Local
+    migrate: true
+  redis:
+    addr: 101.42.237.244:6379
+    dial_timeout: 10s
+    read_timeout: 2s
+    write_timeout: 2s
+tracer:
+  endpoint: http://101.42.237.244:14268/api/traces
+  batcher: "jaeger"
+  sampler: 1.0
+  env: "dev"
