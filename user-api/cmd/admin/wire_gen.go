@@ -7,11 +7,6 @@
 package main
 
 import (
-	"admin/internal/biz"
-	"admin/internal/conf"
-	"admin/internal/data"
-	"admin/internal/server"
-	"admin/internal/service"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
 )
