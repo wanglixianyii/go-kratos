@@ -4,9 +4,9 @@ import (
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/jinzhu/copier"
-	v1 "github.com/wanglixianyii/go-kratos/user-rpc/api/user/v1"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/biz"
 	"go.opentelemetry.io/otel"
+	v1 "user-rpc/api/user/v1"
+	"user-rpc/internal/biz"
 )
 
 type UserService struct {

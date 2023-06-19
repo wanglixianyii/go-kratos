@@ -1,12 +1,12 @@
-module github.com/wanglixianyii/go-kratos/user-rpc
+module user-rpc
 
 go 1.20
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.54.0
 
 require (
-	github.com/go-kratos/kratos/contrib/metrics/prometheus/v2 v2.0.0-20230616090408-32c0d2dd97e2
-	github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616090408-32c0d2dd97e2
+	github.com/go-kratos/kratos/contrib/metrics/prometheus/v2 v2.0.0-20230616115456-fcd3b18e8344
+	github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616115456-fcd3b18e8344
 	github.com/go-kratos/kratos/v2 v2.6.2
 	github.com/go-redis/redis/extra/redisotel v0.3.0
 	github.com/go-redis/redis/v8 v8.11.5

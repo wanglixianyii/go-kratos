@@ -1,9 +1,9 @@
 package service
 
 import (
+	v1 "authority-rpc/api/authority/v1"
+	"authority-rpc/internal/biz"
 	"context"
-	v1 "github.com/wanglixianyii/go-kratos/rpc-authority/api/authority/v1"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/biz"
 )
 
 func (s *AuthorityService) MenuList(ctx context.Context, req *v1.MenuListReq) (*v1.MenuListResp, error) {

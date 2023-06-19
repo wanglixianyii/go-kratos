@@ -9,11 +9,11 @@ import (
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
-	"github.com/wanglixianyii/go-kratos/user-api/internal/biz"
-	"github.com/wanglixianyii/go-kratos/user-api/internal/conf"
-	"github.com/wanglixianyii/go-kratos/user-api/internal/data"
-	"github.com/wanglixianyii/go-kratos/user-api/internal/server"
-	"github.com/wanglixianyii/go-kratos/user-api/internal/service"
+	"user-api/internal/biz"
+	"user-api/internal/conf"
+	"user-api/internal/data"
+	"user-api/internal/server"
+	"user-api/internal/service"
 )
 
 func wireApp(*conf.Server, *conf.Data, *conf.Auth, *conf.Service, *conf.Registry, log.Logger) (*kratos.App, func(), error) {

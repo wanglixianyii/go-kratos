@@ -1,9 +1,9 @@
 package bootstrap
 
 import (
+	"authority-rpc/internal/conf"
 	"github.com/go-kratos/kratos/v2/config"
 	"github.com/go-kratos/kratos/v2/config/file"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf"
 )
 
 // NewConfigProvider 创建一个配置

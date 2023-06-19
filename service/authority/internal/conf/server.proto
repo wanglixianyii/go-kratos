@@ -4,7 +4,7 @@ package authority.conf;
 
 import "google/protobuf/duration.proto";
 
-option go_package = "github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf;conf";
+option go_package = "authority-rpc/internal/conf;conf";
 
 // 服务器
 message Server {

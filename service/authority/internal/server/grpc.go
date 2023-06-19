@@ -1,14 +1,14 @@
 package server
 
 import (
+	v1 "authority-rpc/api/authority/v1"
+	"authority-rpc/internal/conf"
+	"authority-rpc/internal/service"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/logging"
 	"github.com/go-kratos/kratos/v2/middleware/recovery"
 	"github.com/go-kratos/kratos/v2/middleware/tracing"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
-	v1 "github.com/wanglixianyii/go-kratos/rpc-authority/api/authority/v1"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/service"
 )
 
 // NewGRPCServer new a gRPC server.

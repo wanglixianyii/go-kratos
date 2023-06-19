@@ -1,11 +1,11 @@
 package data
 
 import (
-	userService "user-api/api/service/user-api/v1"
-	"admin/internal/biz"
 	"context"
 	"fmt"
 	"github.com/go-kratos/kratos/v2/log"
+	"user-api/internal/biz"
+	userService "user-rpc/api/v1"
 )
 
 type userRepo struct {

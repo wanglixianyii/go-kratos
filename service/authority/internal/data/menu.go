@@ -1,10 +1,10 @@
 package data
 
 import (
+	"authority-rpc/internal/biz"
 	"context"
 	"github.com/go-kratos/kratos/v2/errors"
 	"github.com/go-kratos/kratos/v2/log"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/biz"
 	"gorm.io/gorm"
 )
 

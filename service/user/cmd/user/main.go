@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/conf"
 	"os"
+	"user-rpc/internal/conf"
 
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/config"

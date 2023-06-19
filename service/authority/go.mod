@@ -1,18 +1,19 @@
-module github.com/wanglixianyii/go-kratos/rpc-authority
+module authority-rpc
 
 go 1.20
 
 replace google.golang.org/grpc => google.golang.org/grpc v1.54.0
 
 require (
-	github.com/go-kratos/kratos/contrib/log/zap/v2 v2.0.0-20230608092011-e86ad248c3c1
-	github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230608092011-e86ad248c3c1
-	github.com/go-kratos/kratos/contrib/registry/etcd/v2 v2.0.0-20230608092011-e86ad248c3c1
-	github.com/go-kratos/kratos/contrib/registry/kubernetes/v2 v2.0.0-20230608092011-e86ad248c3c1
+	github.com/go-kratos/kratos/contrib/log/zap/v2 v2.0.0-20230616115456-fcd3b18e8344
+	github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616115456-fcd3b18e8344
+	github.com/go-kratos/kratos/contrib/registry/etcd/v2 v2.0.0-20230616115456-fcd3b18e8344
+	github.com/go-kratos/kratos/contrib/registry/kubernetes/v2 v2.0.0-20230616115456-fcd3b18e8344
 	github.com/go-kratos/kratos/v2 v2.6.2
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/google/wire v0.5.0
-	github.com/hashicorp/consul/api v1.20.0
+	github.com/hashicorp/consul/api v1.21.0
+	github.com/redis/go-redis/v9 v9.0.5
 	go.etcd.io/etcd/client/v3 v3.5.9
 	go.opentelemetry.io/otel v1.16.0
 	go.opentelemetry.io/otel/exporters/jaeger v1.16.0
@@ -20,9 +21,8 @@ require (
 	go.opentelemetry.io/otel/sdk v1.16.0
 	go.uber.org/automaxprocs v1.5.2
 	go.uber.org/zap v1.24.0
-	google.golang.org/grpc v1.54.0
+	google.golang.org/grpc v1.51.0
 	google.golang.org/protobuf v1.30.0
-	gopkg.in/natefinch/lumberjack.v2 v2.2.1
 	gorm.io/driver/mysql v1.5.1
 	gorm.io/gorm v1.25.1
 	k8s.io/client-go v0.27.3
@@ -88,9 +88,7 @@ require (
 	golang.org/x/text v0.8.0 // indirect
 	golang.org/x/time v0.1.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/genproto v0.0.0-20230525234025-438c736192d0 // indirect
-	google.golang.org/genproto/googleapis/api v0.0.0-20230530153820-e85fd2cbaebc // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20230525234030-28d5490b6b19 // indirect
+	google.golang.org/genproto v0.0.0-20230110181048-76db0878b65f // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect

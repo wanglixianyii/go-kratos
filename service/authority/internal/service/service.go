@@ -1,10 +1,10 @@
 package service
 
 import (
+	v1 "authority-rpc/api/authority/v1"
+	"authority-rpc/internal/biz"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
-	v1 "github.com/wanglixianyii/go-kratos/rpc-authority/api/authority/v1"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/biz"
 )
 
 // ProviderSet is service providers.

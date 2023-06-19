@@ -1,12 +1,12 @@
 package main
 
 import (
+	"authority-rpc/pkg/bootstrap"
+	"authority-rpc/pkg/service"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/registry"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/pkg/bootstrap"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/pkg/service"
 	_ "go.uber.org/automaxprocs"
 )
 

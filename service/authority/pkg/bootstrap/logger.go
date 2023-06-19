@@ -1,13 +1,12 @@
 package bootstrap
 
 import (
+	"authority-rpc/internal/conf"
 	zapLogger "github.com/go-kratos/kratos/contrib/log/zap/v2"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/tracing"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-	"gopkg.in/natefinch/lumberjack.v2"
 	"os"
 	"path/filepath"
 )

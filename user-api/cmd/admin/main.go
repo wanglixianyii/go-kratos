@@ -4,7 +4,6 @@ import (
 	"flag"
 	"github.com/go-kratos/kratos/v2/registry"
 	"github.com/tx7do/kratos-transport/transport/rocketmq"
-	"github.com/wanglixianyii/go-kratos/user-api/internal/conf"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/exporters/jaeger"
@@ -12,6 +11,7 @@ import (
 	traceSdk "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/semconv/v1.20.0"
 	"os"
+	"user-api/internal/conf"
 
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/config"

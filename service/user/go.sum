@@ -458,10 +458,10 @@ github.com/go-kit/log v0.2.0/go.mod h1:NwTd00d/i8cPZ3xOwwiv2PO5MOcx78fFErGNcVmBj
 github.com/go-kit/log v0.2.1/go.mod h1:NwTd00d/i8cPZ3xOwwiv2PO5MOcx78fFErGNcVmBjv0=
 github.com/go-kratos/aegis v0.2.0 h1:dObzCDWn3XVjUkgxyBp6ZeWtx/do0DPZ7LY3yNSJLUQ=
 github.com/go-kratos/aegis v0.2.0/go.mod h1:v0R2m73WgEEYB3XYu6aE2WcMwsZkJ/Rzuf5eVccm7bI=
-github.com/go-kratos/kratos/contrib/metrics/prometheus/v2 v2.0.0-20230616090408-32c0d2dd97e2 h1:iFKW5rpsDtSDjvlnrOe6NZzKcn7Y5y1QWnlxZUzRut0=
-github.com/go-kratos/kratos/contrib/metrics/prometheus/v2 v2.0.0-20230616090408-32c0d2dd97e2/go.mod h1:MvGJvFNhn/vUFsHtwf4gqMhop2WeVA1g6bj70TATeyg=
-github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616090408-32c0d2dd97e2 h1:IUy+h1A6UWch5Vw+o6rQiqemS4za9eTY49q0/8t5gz4=
-github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616090408-32c0d2dd97e2/go.mod h1:BI0LIs3jJw80l2onjjWDEn4TiHKrGJ0p9ORMGCIc1ko=
+github.com/go-kratos/kratos/contrib/metrics/prometheus/v2 v2.0.0-20230616115456-fcd3b18e8344 h1:dd/QyiCkuq8BtLpdsL4AdmobmD2njn667TtgrSHKw60=
+github.com/go-kratos/kratos/contrib/metrics/prometheus/v2 v2.0.0-20230616115456-fcd3b18e8344/go.mod h1:MvGJvFNhn/vUFsHtwf4gqMhop2WeVA1g6bj70TATeyg=
+github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616115456-fcd3b18e8344 h1:AUhy3Dh3g8Yf6v3rmeE8lwNdwvkBO1sngHmXyQc7TyY=
+github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616115456-fcd3b18e8344/go.mod h1:BI0LIs3jJw80l2onjjWDEn4TiHKrGJ0p9ORMGCIc1ko=
 github.com/go-kratos/kratos/v2 v2.6.2 h1:9ar3d6tbci4GhqUsar18MB20hgFDOV70buDkWGUrX3M=
 github.com/go-kratos/kratos/v2 v2.6.2/go.mod h1:xTeAeI9iYBP8MauISfxmRGSmKdDTLRQ3rbarKYmt6P4=
 github.com/go-logfmt/logfmt v0.3.0/go.mod h1:Qt1PoO58o5twSAckw1HlFXLmHsOX5/0LbT9GBnD5lWE=

@@ -3,7 +3,7 @@ syntax = "proto3";
 package authority.v1;
 
 
-option go_package = "github.com/wanglixianyii/go-kratos/rpc-authority/api/authority/v1;v1";
+option go_package = "authority-rpc/api/authority/v1;v1";
 
 service authority {
   // 菜单

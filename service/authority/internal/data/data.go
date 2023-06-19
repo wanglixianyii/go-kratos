@@ -1,11 +1,12 @@
 package data
 
 import (
+	"authority-rpc/internal/conf"
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-redis/redis/v8"
 	"github.com/google/wire"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"

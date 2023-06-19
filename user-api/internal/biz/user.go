@@ -6,11 +6,11 @@ import (
 	"github.com/go-kratos/kratos/v2/log"
 	authJwt "github.com/go-kratos/kratos/v2/middleware/auth/jwt"
 	"github.com/golang-jwt/jwt/v4"
-	v1 "github.com/wanglixianyii/go-kratos/user-api/api/admin/v1"
-	"github.com/wanglixianyii/go-kratos/user-api/internal/conf"
-	"github.com/wanglixianyii/go-kratos/user-api/internal/pkg/captcha"
-	usV1 "github.com/wanglixianyii/go-kratos/user-rpc/api/user/v1"
 	"time"
+	v1 "user-api/api/admin/v1"
+	"user-api/internal/conf"
+	"user-api/internal/pkg/captcha"
+	usV1 "user-rpc/api/user/v1"
 )
 
 type User struct {

@@ -9,11 +9,11 @@ import (
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/biz"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/conf"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/data"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/server"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/service"
+	"user-rpc/internal/biz"
+	"user-rpc/internal/conf"
+	"user-rpc/internal/data"
+	"user-rpc/internal/server"
+	"user-rpc/internal/service"
 )
 
 // wireApp init kratos application.

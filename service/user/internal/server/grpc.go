@@ -5,9 +5,9 @@ import (
 	"github.com/go-kratos/kratos/v2/middleware/metrics"
 	"github.com/go-kratos/kratos/v2/middleware/tracing"
 	"github.com/prometheus/client_golang/prometheus"
-	v1 "github.com/wanglixianyii/go-kratos/user-rpc/api/user/v1"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/conf"
-	"github.com/wanglixianyii/go-kratos/user-rpc/internal/service"
+	v1 "user-rpc/api/user/v1"
+	"user-rpc/internal/conf"
+	"user-rpc/internal/service"
 
 	prom "github.com/go-kratos/kratos/contrib/metrics/prometheus/v2"
 	"github.com/go-kratos/kratos/v2/log"

@@ -1,4 +1,4 @@
-module github.com/wanglixianyii/go-kratos/user-api
+module user-api
 
 go 1.20
 
@@ -7,12 +7,12 @@ replace google.golang.org/grpc => google.golang.org/grpc v1.54.0
 require (
 	github.com/aliyunmq/mq-http-go-sdk v1.0.3
 	github.com/apache/rocketmq-client-go/v2 v2.1.1
-	github.com/casbin/casbin/v2 v2.71.0
+	github.com/casbin/casbin/v2 v2.71.1
 	github.com/envoyproxy/protoc-gen-validate v1.0.1
-	github.com/go-kratos/kratos/contrib/log/zap/v2 v2.0.0-20230616090408-32c0d2dd97e2
-	github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616090408-32c0d2dd97e2
-	github.com/go-kratos/kratos/contrib/registry/etcd/v2 v2.0.0-20230616090408-32c0d2dd97e2
-	github.com/go-kratos/kratos/contrib/registry/kubernetes/v2 v2.0.0-20230616090408-32c0d2dd97e2
+	github.com/go-kratos/kratos/contrib/log/zap/v2 v2.0.0-20230616115456-fcd3b18e8344
+	github.com/go-kratos/kratos/contrib/registry/consul/v2 v2.0.0-20230616115456-fcd3b18e8344
+	github.com/go-kratos/kratos/contrib/registry/etcd/v2 v2.0.0-20230616115456-fcd3b18e8344
+	github.com/go-kratos/kratos/contrib/registry/kubernetes/v2 v2.0.0-20230616115456-fcd3b18e8344
 	github.com/go-kratos/kratos/v2 v2.6.2
 	github.com/gogap/errors v0.0.0-20210818113853-edfbba0ddea9
 	github.com/golang-jwt/jwt/v4 v4.5.0
@@ -27,7 +27,7 @@ require (
 	github.com/stretchr/testify v1.8.4
 	github.com/tx7do/kratos-transport v1.0.5
 	github.com/tx7do/kratos-transport/transport/kafka v1.0.2
-	github.com/tx7do/kratos-transport/transport/rocketmq v0.0.0-20230610055428-0904e2420b22
+	github.com/tx7do/kratos-transport/transport/rocketmq v0.0.0-20230617090719-3e4baf2d9b3f
 	go.etcd.io/etcd/client/v3 v3.5.9
 	go.opentelemetry.io/otel v1.16.0
 	go.opentelemetry.io/otel/exporters/jaeger v1.16.0

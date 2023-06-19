@@ -6,15 +6,14 @@
 package main
 
 import (
-	"github.com/go-kratos/kratos/v2"
+	"authority-rpc/internal/biz"
+	"authority-rpc/internal/conf"
+	"authority-rpc/internal/data"
+	"authority-rpc/internal/server"
+	"authority-rpc/internal/service"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/registry"
 	"github.com/google/wire"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/biz"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/conf"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/data"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/server"
-	"github.com/wanglixianyii/go-kratos/rpc-authority/internal/service"
 )
 
 // wireApp init kratos application.
