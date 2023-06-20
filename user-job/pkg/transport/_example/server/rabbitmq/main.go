@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	testBroker = "amqp://user-api:bitnami@127.0.0.1:5672"
+	testBroker = "amqp://user-rpc-rpc-api:bitnami@127.0.0.1:5672"
 
 	testExchange = "test_exchange"
 	testQueue    = "test_queue"

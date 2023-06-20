@@ -2,9 +2,27 @@ server:
   http:
     addr: 0.0.0.0:5020
     timeout: 1s
+    cors:
+      headers:
+        - "X-Requested-With"
+        - "Content-Type"
+        - "Authorization"
+      methods:
+        - "GET"
+        - "POST"
+        - "PUT"
+        - "DELETE"
+        - "HEAD"
+        - "OPTIONS"
+      origins:
+        - "*"
+    middleware:
+      auth:
+        jwt_key: hqFr%3ddt32DGlSTOI5cO6@TH#fFwYnP$S
   grpc:
-    addr: 0.0.0.0:6020
-    timeout: 1s
+    addr: "0.0.0.0:0"
+    timeout: 10s
+    middleware:
 data:
   database:
     driver: mysql

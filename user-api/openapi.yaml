@@ -3,14 +3,14 @@
 
 openapi: 3.0.3
 info:
-    title: Admin API
+    title: User API
     version: 0.0.1
 paths:
-    /api/user/v1/userinfo:
+    /api/user-rpc-rpc-api/v1/userinfo:
         post:
             tags:
-                - Admin
-            operationId: Admin_UserInfo
+                - User
+            operationId: User_UserInfo
             requestBody:
                 content:
                     application/json: {}
@@ -31,8 +31,8 @@ paths:
     /api/users/v1/captcha:
         get:
             tags:
-                - Admin
-            operationId: Admin_Captcha
+                - User
+            operationId: User_Captcha
             responses:
                 "200":
                     description: OK
@@ -49,8 +49,8 @@ paths:
     /api/users/v1/login:
         post:
             tags:
-                - Admin
-            operationId: Admin_Login
+                - User
+            operationId: User_Login
             requestBody:
                 content:
                     application/json:
@@ -73,8 +73,8 @@ paths:
     /api/users/v1/register:
         post:
             tags:
-                - Admin
-            operationId: Admin_Register
+                - User
+            operationId: User_Register
             requestBody:
                 content:
                     application/json:
@@ -173,7 +173,7 @@ components:
                     format: int32
                 message:
                     type: string
-                    description: A developer-facing error message, which should be in English. Any user-api-facing error message should be localized and sent in the [google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client.
+                    description: A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the [google.rpc.Status.details][google.rpc.Status.details] field, or localized by the client.
                 details:
                     type: array
                     items:
@@ -186,6 +186,8 @@ components:
                 id:
                     type: integer
                     format: int64
+                password:
+                    type: string
                 mobile:
                     type: string
                 username:
@@ -193,5 +195,9 @@ components:
                 gender:
                     type: integer
                     format: int64
+                AvatarId:
+                    type: integer
+                    format: int64
+            description: 用户信息
 tags:
-    - name: Admin
+    - name: User

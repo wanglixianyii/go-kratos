@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 	"time"
-	broker2 "user-api-job/pkg/broker"
 	"user-job/pkg/broker/redis"
+	broker2 "user-rpc-rpc-api-user-rpc-job/pkg/broker"
 )
 
 var (

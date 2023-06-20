@@ -1,6 +1,7 @@
 package biz
 
 import (
+	v1 "authority-api/api/service/authority-rpc/v1"
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
 )
@@ -25,11 +26,11 @@ type Menu struct {
 }
 
 type MenuRepo interface {
-	GetMenuById(ctx context.Context, id int64) (*Menu, error)
-	CreateMenu(ctx context.Context, m *Menu) (*Menu, error)
-	UpdateMenu(ctx context.Context, m *Menu) (*Menu, error)
-	DeleteMenu(ctx context.Context, id int64) error
-	ListMenu(ctx context.Context, title string) ([]*Menu, error)
+	GetMenuById(ctx context.Context, id int64) (*v1.DetailMenuResp, error)
+	CreateMenu(ctx context.Context, req *v1.CreateMenuReq) (*v1.CreateMenuResp, error)
+	UpdateMenu(ctx context.Context, req *v1.UpdateMenuReq) (*v1.UpdateMenuResp, error)
+	DeleteMenu(ctx context.Context, id int64) (*v1.DeleteMenuResp, error)
+	ListMenu(ctx context.Context, title string) (*v1.MenuListResp, error)
 }
 
 type MenuUseCase struct {
@@ -38,27 +39,27 @@ type MenuUseCase struct {
 }
 
 func NewMenuUseCase(repo MenuRepo, logger log.Logger) *MenuUseCase {
-	return &MenuUseCase{repo: repo, log: log.NewHelper(log.With(logger, "module", "useCase/authority"))}
+	return &MenuUseCase{repo: repo, log: log.NewHelper(log.With(logger, "module", "useCase/authority-rpc-api"))}
 }
 
-func (uc *MenuUseCase) List(ctx context.Context, title string) ([]*Menu, error) {
+func (uc *MenuUseCase) List(ctx context.Context, req *v1.MenuListReq) (*v1.MenuListResp, error) {
 	uc.log.Info("test")
 
-	return uc.repo.ListMenu(ctx, title)
+	return uc.repo.ListMenu(ctx, req.Title)
 }
 
-func (uc *MenuUseCase) Create(ctx context.Context, m *Menu) (*Menu, error) {
-	return uc.repo.CreateMenu(ctx, m)
+func (uc *MenuUseCase) Create(ctx context.Context, req *v1.CreateMenuReq) (*v1.CreateMenuResp, error) {
+	return uc.repo.CreateMenu(ctx, req)
 }
 
-func (uc *MenuUseCase) Get(ctx context.Context, id int64) (*Menu, error) {
+func (uc *MenuUseCase) GetMenuById(ctx context.Context, id int64) (*v1.DetailMenuResp, error) {
 	return uc.repo.GetMenuById(ctx, id)
 }
 
-func (uc *MenuUseCase) Update(ctx context.Context, u *Menu) (*Menu, error) {
-	return uc.repo.UpdateMenu(ctx, u)
+func (uc *MenuUseCase) Update(ctx context.Context, req *v1.UpdateMenuReq) (*v1.UpdateMenuResp, error) {
+	return uc.repo.UpdateMenu(ctx, req)
 }
 
-func (uc *MenuUseCase) Delete(ctx context.Context, id int64) error {
-	return uc.repo.DeleteMenu(ctx, id)
+func (uc *MenuUseCase) Delete(ctx context.Context, req *v1.DeleteMenuReq) (*v1.DeleteMenuResp, error) {
+	return uc.repo.DeleteMenu(ctx, req.Id)
 }

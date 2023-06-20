@@ -3,8 +3,8 @@ package data
 import (
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
-	v1 "user-api-job/api/service/user-api/v1"
 	"user-job/internal/biz"
+	v1 "user-rpc-rpc-api-user-rpc-job/api/service/user-rpc-rpc-api/v1"
 )
 
 type userRepo struct {
@@ -16,7 +16,7 @@ type userRepo struct {
 func NewUserRepo(data *Data, logger log.Logger) biz.UserRepo {
 	return &userRepo{
 		data: data,
-		log:  log.NewHelper(log.With(logger, "module", "repo/user-api")),
+		log:  log.NewHelper(log.With(logger, "module", "repo/user-rpc-rpc-api")),
 	}
 }
 

@@ -9,7 +9,7 @@ import (
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"
-	userV1 "user-api-job/api/service/user-api/v1"
+	userV1 "user-rpc-rpc-api-user-rpc-job/api/service/user-rpc-rpc-api/v1"
 )
 
 // ProviderSet is data providers.
@@ -25,7 +25,7 @@ type Data struct {
 func NewData(uc userV1.UserClient, logger log.Logger) (*Data, func(), error) {
 	cleanup := func() {
 	}
-	l := log.NewHelper(log.With(logger, "module", "data/user-api-job-service"))
+	l := log.NewHelper(log.With(logger, "module", "data/user-rpc-rpc-api-user-rpc-job-service"))
 	return &Data{log: l, uc: uc}, cleanup, nil
 }
 

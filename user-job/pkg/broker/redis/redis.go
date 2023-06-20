@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 	"time"
-	broker2 "user-api-job/pkg/broker"
+	broker2 "user-rpc-rpc-api-user-rpc-job/pkg/broker"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/gomodule/redigo/redis"
@@ -23,7 +23,7 @@ type redisBroker struct {
 
 // NewBroker returns a new common implemented using the Redis pub/sub
 // protocol. The connection address may be a fully qualified IANA address such
-// as: redis://user-api:secret@localhost:6379/0?foo=bar&qux=baz
+// as: redis://user-rpc-rpc-api:secret@localhost:6379/0?foo=bar&qux=baz
 func NewBroker(opts ...broker2.Option) broker2.Broker {
 	commonOpts := &commonOptions{
 		maxIdle:        DefaultMaxIdle,

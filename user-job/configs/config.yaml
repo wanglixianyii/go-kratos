@@ -1,4 +1,4 @@
-name: user-api.job
+name: user-rpc-rpc-api.user-rpc-job
 server:
   grpc:
     addr: 0.0.0.0:9903

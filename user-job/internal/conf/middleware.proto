@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package user.job.conf;
 
-option go_package = "user-api-job/internal/conf;conf";
+option go_package = "user-rpc-rpc-api-user-rpc-job/internal/conf;conf";
 
 message Middleware {
   // JWT校验

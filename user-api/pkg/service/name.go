@@ -1,6 +1,6 @@
 package service
 
 const (
-	UserJobService = "user-api-job.service"         // 核心服务
-	UserService    = "kratos-shop.user-api.service" // 核心服务
+	UserJobService = "user-rpc-rpc-api-user-rpc-job.service"    // 核心服务
+	UserService    = "kratos-shop.user-rpc-rpc-api.service" // 核心服务
 )

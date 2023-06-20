@@ -17,7 +17,7 @@ type KafkaUseCase struct {
 
 func NewKafkaUseCase(repo KafkaRepo, logger log.Logger) *KafkaUseCase {
 
-	helper := log.NewHelper(log.With(logger, "module", "useCase/job"))
+	helper := log.NewHelper(log.With(logger, "module", "useCase/user-rpc-job"))
 	return &KafkaUseCase{
 		repo: repo,
 		log:  helper,

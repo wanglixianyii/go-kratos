@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package authority.conf;
+
+option go_package = "authority-rpc-api-rpc/internal/conf;conf";
+
+// 日志
+message Logger {
+  // Zap
+  message Zap {
+    string level = 1;
+    string filePath = 2;
+    string fileName = 3;
+    int32 maxSize = 4;
+    int32 maxAge = 5;
+    int32 maxBackups = 6;
+    bool  logStdout = 7;
+  }
+
+  string type = 1;
+  Zap zap = 2;
+}

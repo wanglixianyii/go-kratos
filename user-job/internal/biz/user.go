@@ -3,8 +3,8 @@ package biz
 import (
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
-	usV1 "github.com/wanglixianyii/go-kratos/rpc-authority/api/v1"
-	v1 "github.com/wanglixianyii/go-kratos/user-job/api/job/v1"
+	usV1 "github.com/wanglixianyii/go-kratos/rpc-authority-rpc-api/api/v1"
+	v1 "github.com/wanglixianyii/go-kratos/user-job/api/user-job/v1"
 	"time"
 )
 
@@ -32,7 +32,7 @@ type UserUseCase struct {
 
 func NewUserUseCase(repo UserRepo, logger log.Logger, us usV1.UserClient) *UserUseCase {
 
-	helper := log.NewHelper(log.With(logger, "module", "rocketmq/user-api"))
+	helper := log.NewHelper(log.With(logger, "module", "rocketmq/user-rpc-rpc-api"))
 	return &UserUseCase{
 		repo: repo,
 		us:   us,

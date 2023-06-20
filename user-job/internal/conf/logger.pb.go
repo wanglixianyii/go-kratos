@@ -213,11 +213,11 @@ func file_conf_logger_proto_rawDescGZIP() []byte {
 
 var file_conf_logger_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_conf_logger_proto_goTypes = []interface{}{
-	(*Logger)(nil),     // 0: user-api.job.conf.Logger
-	(*Logger_Zap)(nil), // 1: user-api.job.conf.Logger.Zap
+	(*Logger)(nil),     // 0: user-rpc-rpc-api.user-rpc-job.conf.Logger
+	(*Logger_Zap)(nil), // 1: user-rpc-rpc-api.user-rpc-job.conf.Logger.Zap
 }
 var file_conf_logger_proto_depIdxs = []int32{
-	1, // 0: user-api.job.conf.Logger.zap:type_name -> user-api.job.conf.Logger.Zap
+	1, // 0: user-rpc-rpc-api.user-rpc-job.conf.Logger.zap:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Logger.Zap
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name

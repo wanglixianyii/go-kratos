@@ -231,7 +231,7 @@ type Service struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	User *Service_User `protobuf:"bytes,1,opt,name=user-api,proto3" json:"user-api,omitempty"`
+	User *Service_User `protobuf:"bytes,1,opt,name=user-rpc-rpc-api,proto3" json:"user-rpc-rpc-api,omitempty"`
 }
 
 func (x *Service) Reset() {
@@ -1075,7 +1075,7 @@ var file_conf_conf_proto_depIdxs = []int32{
 	10, // 8: kratos.api.Server.rocketmq:type_name -> kratos.api.Server.Rocketmq
 	11, // 9: kratos.api.Data.database:type_name -> kratos.api.Data.Database
 	12, // 10: kratos.api.Data.redis:type_name -> kratos.api.Data.Redis
-	13, // 11: kratos.api.Service.user-api:type_name -> kratos.api.Service.User
+	13, // 11: kratos.api.Service.user-rpc-rpc-api:type_name -> kratos.api.Service.User
 	14, // 12: kratos.api.Registry.consul:type_name -> kratos.api.Registry.Consul
 	15, // 13: kratos.api.Registry.etcd:type_name -> kratos.api.Registry.Etcd
 	16, // 14: kratos.api.Server.HTTP.timeout:type_name -> google.protobuf.Duration

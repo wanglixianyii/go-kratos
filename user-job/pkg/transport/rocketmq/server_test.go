@@ -14,7 +14,7 @@ import (
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/stretchr/testify/assert"
-	api "user-api-job/pkg/transport/_example/api/manual"
+	api "user-rpc-rpc-api-user-rpc-job/pkg/transport/_example/api/manual"
 )
 
 const (

@@ -361,15 +361,15 @@ func file_conf_middleware_proto_rawDescGZIP() []byte {
 
 var file_conf_middleware_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_conf_middleware_proto_goTypes = []interface{}{
-	(*Middleware)(nil),             // 0: user-api.job.conf.Middleware
-	(*Middleware_Auth)(nil),        // 1: user-api.job.conf.Middleware.Auth
-	(*Middleware_RateLimiter)(nil), // 2: user-api.job.conf.Middleware.RateLimiter
-	(*Middleware_Metrics)(nil),     // 3: user-api.job.conf.Middleware.Metrics
+	(*Middleware)(nil),             // 0: user-rpc-rpc-api.user-rpc-job.conf.Middleware
+	(*Middleware_Auth)(nil),        // 1: user-rpc-rpc-api.user-rpc-job.conf.Middleware.Auth
+	(*Middleware_RateLimiter)(nil), // 2: user-rpc-rpc-api.user-rpc-job.conf.Middleware.RateLimiter
+	(*Middleware_Metrics)(nil),     // 3: user-rpc-rpc-api.user-rpc-job.conf.Middleware.Metrics
 }
 var file_conf_middleware_proto_depIdxs = []int32{
-	2, // 0: user-api.job.conf.Middleware.limiter:type_name -> user-api.job.conf.Middleware.RateLimiter
-	3, // 1: user-api.job.conf.Middleware.metrics:type_name -> user-api.job.conf.Middleware.Metrics
-	1, // 2: user-api.job.conf.Middleware.auth:type_name -> user-api.job.conf.Middleware.Auth
+	2, // 0: user-rpc-rpc-api.user-rpc-job.conf.Middleware.limiter:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Middleware.RateLimiter
+	3, // 1: user-rpc-rpc-api.user-rpc-job.conf.Middleware.metrics:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Middleware.Metrics
+	1, // 2: user-rpc-rpc-api.user-rpc-job.conf.Middleware.auth:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Middleware.Auth
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

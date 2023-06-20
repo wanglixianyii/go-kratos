@@ -3,8 +3,8 @@ package handle
 import (
 	"context"
 	"fmt"
-	pb "user-api-job/api/job/v1"
 	"user-job/pkg/broker"
+	pb "user-rpc-rpc-api-user-rpc-job/api/user-rpc-job/v1"
 )
 
 func RegisterUserHandler(fnc UserHandler) broker.Handler {

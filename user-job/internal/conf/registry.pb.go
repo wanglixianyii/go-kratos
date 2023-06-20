@@ -289,15 +289,15 @@ func file_conf_registry_proto_rawDescGZIP() []byte {
 
 var file_conf_registry_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_conf_registry_proto_goTypes = []interface{}{
-	(*Registry)(nil),            // 0: user-api.job.conf.Registry
-	(*Registry_Consul)(nil),     // 1: user-api.job.conf.Registry.Consul
-	(*Registry_Etcd)(nil),       // 2: user-api.job.conf.Registry.Etcd
-	(*Registry_Kubernetes)(nil), // 3: user-api.job.conf.Registry.Kubernetes
+	(*Registry)(nil),            // 0: user-rpc-rpc-api.user-rpc-job.conf.Registry
+	(*Registry_Consul)(nil),     // 1: user-rpc-rpc-api.user-rpc-job.conf.Registry.Consul
+	(*Registry_Etcd)(nil),       // 2: user-rpc-rpc-api.user-rpc-job.conf.Registry.Etcd
+	(*Registry_Kubernetes)(nil), // 3: user-rpc-rpc-api.user-rpc-job.conf.Registry.Kubernetes
 }
 var file_conf_registry_proto_depIdxs = []int32{
-	1, // 0: user-api.job.conf.Registry.consul:type_name -> user-api.job.conf.Registry.Consul
-	2, // 1: user-api.job.conf.Registry.etcd:type_name -> user-api.job.conf.Registry.Etcd
-	3, // 2: user-api.job.conf.Registry.kubernetes:type_name -> user-api.job.conf.Registry.Kubernetes
+	1, // 0: user-rpc-rpc-api.user-rpc-job.conf.Registry.consul:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Registry.Consul
+	2, // 1: user-rpc-rpc-api.user-rpc-job.conf.Registry.etcd:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Registry.Etcd
+	3, // 2: user-rpc-rpc-api.user-rpc-job.conf.Registry.kubernetes:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Registry.Kubernetes
 	3, // [3:3] is the sub-list for method output_type
 	3, // [3:3] is the sub-list for method input_type
 	3, // [3:3] is the sub-list for extension type_name

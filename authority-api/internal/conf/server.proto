@@ -4,15 +4,48 @@ package authority.conf;
 
 import "google/protobuf/duration.proto";
 
-option go_package = "authority-api/internal/conf;conf";
+option go_package = "authority-rpc-api-api/internal/conf;conf";
 
 // 服务器
 message Server {
 
-  message GRPC {
-    string network = 1;
-    string addr = 2;
-    google.protobuf.Duration timeout = 3;
+  message HTTP {
+
+    message CORS {
+      repeated string headers = 1;  //
+      repeated string methods = 2;  //
+      repeated string origins = 3;  //
+    }
+
+    message Middleware {
+      message Auth {
+        string jwtKey = 1;
+      }
+      // 限流器
+      message RateLimiter {
+        string name = 1; // 限流器名字，支持：bbr。
+      }
+      Auth auth = 1;
+      RateLimiter limiter = 2;
+
+    }
+
+
+    string network = 1; // 网络
+    string addr = 2;  // 服务监听地址
+    google.protobuf.Duration timeout = 3; // 超时时间
+    CORS cors = 4;  // 服务监听地址
+    Middleware middleware = 5;  // 中间件
+
   }
-  GRPC grpc = 1;
+
+  // gPRC
+  message GRPC {
+    string network = 1; // 网络
+    string addr = 2;  // 服务监听地址
+    google.protobuf.Duration timeout = 3; // 超时时间
+  }
+
+  HTTP http = 1;
+  GRPC grpc = 2;  // gRPC服务
 }

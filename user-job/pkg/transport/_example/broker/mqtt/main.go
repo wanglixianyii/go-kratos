@@ -20,7 +20,7 @@ const (
 	MosquittoBroker   = "tcp://test.mosquitto.org:1883"
 	HiveMQBroker      = "tcp://broker.hivemq.com:1883"
 	LocalEmqxBroker   = "tcp://127.0.0.1:1883"
-	LocalRabbitBroker = "tcp://user-api:bitnami@127.0.0.1:1883"
+	LocalRabbitBroker = "tcp://user-rpc-rpc-api:bitnami@127.0.0.1:1883"
 )
 
 func handleHygrothermograph(_ context.Context, topic string, headers broker.Headers, msg *api.Hygrothermograph) error {
@@ -36,7 +36,7 @@ func main() {
 		broker.WithCodec("json"),
 		broker.WithAddress(LocalEmqxBroker),
 		mqtt.WithCleanSession(false),
-		mqtt.WithAuth("user-api", "bitnami"),
+		mqtt.WithAuth("user-rpc-rpc-api", "bitnami"),
 		mqtt.WithClientId("test-client-2"),
 	)
 

@@ -123,7 +123,7 @@ func file_conf_tracer_proto_rawDescGZIP() []byte {
 
 var file_conf_tracer_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_conf_tracer_proto_goTypes = []interface{}{
-	(*Tracer)(nil), // 0: user-api.job.conf.Tracer
+	(*Tracer)(nil), // 0: user-rpc-rpc-api.user-rpc-job.conf.Tracer
 }
 var file_conf_tracer_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type

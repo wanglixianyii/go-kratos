@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package authority.api.v1;
+import "google/api/annotations.proto";
+import "service/authority-rpc/v1/authority.proto";
+
+option go_package = "authority-api/api/authority-api/v1;v1";
+
+service Authority {
+  // 菜单
+  rpc MenuList (authority.rpc.v1.MenuListReq) returns (authority.rpc.v1.MenuListResp) {
+    option (google.api.http) = {
+      post: "/authority-rpc-api/v1/menu/list",
+      body: "*",
+    };
+  }
+  rpc CreateMenu (authority.rpc.v1.CreateMenuReq) returns (authority.rpc.v1.CreateMenuResp) {
+    option (google.api.http) = {
+      post: "/authority-rpc-api/v1/menu/create",
+      body: "*",
+    };
+  }
+  rpc UpdateMenu (authority.rpc.v1.UpdateMenuReq) returns (authority.rpc.v1.UpdateMenuResp) {
+    option (google.api.http) = {
+      put: "/authority-rpc-api/v1/menu/update",
+      body: "*",
+    };
+  }
+  rpc DeleteMenu (authority.rpc.v1.DeleteMenuReq) returns (authority.rpc.v1.DeleteMenuResp) {
+    option (google.api.http) = {
+      delete: "/authority-rpc-api/v1/menu/delete",
+    };
+  }
+  rpc DetailMenu (authority.rpc.v1.DetailMenuReq) returns (authority.rpc.v1.DetailMenuResp) {
+    option (google.api.http) = {
+      post: "/authority-rpc-api/v1/menu/detail",
+      body: "*",
+    };
+  }
+}
+

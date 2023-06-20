@@ -2,8 +2,9 @@ package server
 
 import (
 	svcV1 "user-api/api/service/job/v1"
-	"admin/internal/conf"
-	"admin/internal/service"
+	"user-api/internal/conf"
+	"user-api/internal/service"
+
 	"context"
 	"fmt"
 	"github.com/go-kratos/kratos/v2/log"

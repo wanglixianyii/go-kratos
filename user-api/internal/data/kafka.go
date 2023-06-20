@@ -1,11 +1,11 @@
 package data
 
 import (
-	svcV1 "user-api/api/service/job/v1"
 	"admin/internal/biz"
 	"context"
 	"fmt"
 	"github.com/go-kratos/kratos/v2/log"
+	svcV1 "user-api/api/service/job/v1"
 )
 
 var _ biz.KafkaRepo = (*kafkaRepo)(nil)
@@ -18,7 +18,7 @@ type kafkaRepo struct {
 func NewKafkaRepo(data *Data, logger log.Logger) biz.KafkaRepo {
 	return &kafkaRepo{
 		data: data,
-		log:  log.NewHelper(log.With(logger, "job/repo/logger-service")),
+		log:  log.NewHelper(log.With(logger, "user-rpc-job/repo/logger-service")),
 	}
 }
 

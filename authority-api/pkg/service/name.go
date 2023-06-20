@@ -1,5 +1,6 @@
 package service
 
 const (
-	RpcAuthorityService = "go-kratos.rpc-authority.service"
+	AuthorityRpcService = "authority.rpc.service"
+	AuthorityApiService = "authority.api.service"
 )

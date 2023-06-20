@@ -1,4 +1,4 @@
-name: user-api.api
+name: user-rpc-rpc-api.api
 server:
   http:
     addr: 0.0.0.0:8901
@@ -20,4 +20,4 @@ auth:
   jwt_key: hqFr%3ddt32DGlSTOI5cO6@TH#fFwYnP$S
 service:
   user:
-    endpoint: discovery:///kratos-shop.user-api.service
+    endpoint: discovery:///kratos-shop.user-rpc-rpc-api.service

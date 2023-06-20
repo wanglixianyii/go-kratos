@@ -2,8 +2,9 @@ package server
 
 import (
 	v1 "user-api/api/user-api/v1"
-	"admin/internal/conf"
-	"admin/internal/service"
+	"user-api/internal/conf"
+	"user-api/internal/service"
+
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/auth/jwt"
@@ -18,7 +19,7 @@ import (
 )
 
 // NewHTTPServer new an HTTP server.
-func NewHTTPServer(c *conf.Server, ac *conf.Auth, s *service.AdminService, logger log.Logger) *http.Server {
+func NewHTTPServer(c *conf.Server, ac *conf.Auth, s *service.UserService, logger log.Logger) *http.Server {
 	var opts = []http.ServerOption{
 		http.ErrorEncoder(ErrorEncoder),
 		http.RequestDecoder(RequestDecoder),
@@ -55,16 +56,16 @@ func NewHTTPServer(c *conf.Server, ac *conf.Auth, s *service.AdminService, logge
 	//opts = append(opts, )
 
 	srv := http.NewServer(opts...)
-	v1.RegisterAdminHTTPServer(srv, s)
+	v1.RegisterUserHTTPServer(srv, s)
 	return srv
 }
 
 // NewWhiteListMatcher 白名单不需要token验证的接口
 func NewWhiteListMatcher() selector.MatchFunc {
 	whiteList := make(map[string]struct{})
-	whiteList[v1.OperationAdminCaptcha] = struct{}{}
-	whiteList[v1.OperationAdminLogin] = struct{}{}
-	whiteList[v1.OperationAdminRegister] = struct{}{}
+	whiteList[v1.OperationUserCaptcha] = struct{}{}
+	whiteList[v1.OperationUserLogin] = struct{}{}
+	whiteList[v1.OperationUserRegister] = struct{}{}
 	return func(ctx context.Context, operation string) bool {
 		if _, ok := whiteList[operation]; ok {
 			return false

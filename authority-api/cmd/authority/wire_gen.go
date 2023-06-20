@@ -25,17 +25,18 @@ import (
 
 // wireApp init kratos application.
 func wireApp(logger log.Logger, registrar registry.Registrar, bootstrap *conf.Bootstrap) (*kratos.App, func(), error) {
-	db := data.NewDB(bootstrap)
-	client := data.NewRedis(bootstrap)
-	dataData, cleanup, err := data.NewData(bootstrap, logger, db, client)
+	client := data.NewRedisClient(bootstrap, logger)
+	discovery := data.NewDiscovery(bootstrap)
+	authorityClient := data.NewMenuServiceClient(discovery, bootstrap)
+	dataData, cleanup, err := data.NewData(client, authorityClient, logger)
 	if err != nil {
 		return nil, nil, err
 	}
 	menuRepo := data.NewMenuRepo(dataData, logger)
 	menuUseCase := biz.NewMenuUseCase(menuRepo, logger)
-	authorityService := service.NewAuthorityService(menuUseCase, logger)
-	grpcServer := server.NewGRPCServer(bootstrap, authorityService, logger)
-	app := newApp(logger, grpcServer, registrar)
+	menuService := service.NewMenuService(menuUseCase, logger)
+	httpServer := server.NewHTTPServer(bootstrap, menuService, logger)
+	app := newApp(logger, httpServer, registrar)
 	return app, func() {
 		cleanup()
 	}, nil

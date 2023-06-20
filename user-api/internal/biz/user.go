@@ -7,10 +7,11 @@ import (
 	authJwt "github.com/go-kratos/kratos/v2/middleware/auth/jwt"
 	"github.com/golang-jwt/jwt/v4"
 	"time"
-	v1 "user-api/api/admin/v1"
+	v1 "user-api/api/user-api/v1"
+
+	usV1 "user-api/api/service/user-rpc/v1"
 	"user-api/internal/conf"
 	"user-api/internal/pkg/captcha"
-	usV1 "user-rpc/api/user/v1"
 )
 
 type User struct {
@@ -40,7 +41,7 @@ type UserUseCase struct {
 
 func NewUserUseCase(repo UserRepo, logger log.Logger, us usV1.UserClient, conf *conf.Auth) *UserUseCase {
 
-	helper := log.NewHelper(log.With(logger, "module", "useCase/user-api"))
+	helper := log.NewHelper(log.With(logger, "module", "useCase/user-rpc-rpc-api"))
 	return &UserUseCase{
 		repo:       repo,
 		us:         us,
@@ -84,7 +85,7 @@ func (uc *UserUseCase) Login(ctx context.Context, req *v1.LoginReq) (*v1.LoginRe
 
 	user, err := uc.repo.UserByMobile(ctx, req.Mobile)
 	if err != nil {
-		return nil, errors.New("user-api not found")
+		return nil, errors.New("user-rpc-rpc-api not found")
 	}
 
 	// 用户存在检查密码

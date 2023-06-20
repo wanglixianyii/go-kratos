@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package api.kafka.v1;
 
-option go_package = "user-api/api/job/v1;v1";
+option go_package = "user-rpc-rpc-api/api/user-rpc-job/v1;v1";
 
 service Logger {
     rpc ListSensor(ListSensorReq) returns (ListSensorReply){};

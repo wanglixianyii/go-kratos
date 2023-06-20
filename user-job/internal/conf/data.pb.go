@@ -293,17 +293,17 @@ func file_conf_data_proto_rawDescGZIP() []byte {
 
 var file_conf_data_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_conf_data_proto_goTypes = []interface{}{
-	(*Data)(nil),                // 0: user-api.job.conf.Data
-	(*Data_Database)(nil),       // 1: user-api.job.conf.Data.Database
-	(*Data_Redis)(nil),          // 2: user-api.job.conf.Data.Redis
+	(*Data)(nil),                // 0: user-rpc-rpc-api.user-rpc-job.conf.Data
+	(*Data_Database)(nil),       // 1: user-rpc-rpc-api.user-rpc-job.conf.Data.Database
+	(*Data_Redis)(nil),          // 2: user-rpc-rpc-api.user-rpc-job.conf.Data.Redis
 	(*durationpb.Duration)(nil), // 3: google.protobuf.Duration
 }
 var file_conf_data_proto_depIdxs = []int32{
-	1, // 0: user-api.job.conf.Data.database:type_name -> user-api.job.conf.Data.Database
-	2, // 1: user-api.job.conf.Data.redis:type_name -> user-api.job.conf.Data.Redis
-	3, // 2: user-api.job.conf.Data.Redis.dial_timeout:type_name -> google.protobuf.Duration
-	3, // 3: user-api.job.conf.Data.Redis.read_timeout:type_name -> google.protobuf.Duration
-	3, // 4: user-api.job.conf.Data.Redis.write_timeout:type_name -> google.protobuf.Duration
+	1, // 0: user-rpc-rpc-api.user-rpc-job.conf.Data.database:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Data.Database
+	2, // 1: user-rpc-rpc-api.user-rpc-job.conf.Data.redis:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Data.Redis
+	3, // 2: user-rpc-rpc-api.user-rpc-job.conf.Data.Redis.dial_timeout:type_name -> google.protobuf.Duration
+	3, // 3: user-rpc-rpc-api.user-rpc-job.conf.Data.Redis.read_timeout:type_name -> google.protobuf.Duration
+	3, // 4: user-rpc-rpc-api.user-rpc-job.conf.Data.Redis.write_timeout:type_name -> google.protobuf.Duration
 	5, // [5:5] is the sub-list for method output_type
 	5, // [5:5] is the sub-list for method input_type
 	5, // [5:5] is the sub-list for extension type_name

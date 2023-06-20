@@ -26,9 +26,9 @@ import (
 // go build -ldflags "-X main.Version=x.y.z"
 var (
 	// Name is the name of the compiled software.
-	Name = "user-api.api"
+	Name = "user-rpc-rpc-api.api"
 	// Version is the version of the compiled software.
-	Version = "user-api.api.v1"
+	Version = "user-rpc-rpc-api.api.v1"
 	// flagConf is the config flag.
 	flagConf string
 
@@ -41,7 +41,7 @@ func init() {
 
 func newApp(logger log.Logger, hs *http.Server, rr registry.Registrar, rs *rocketmq.Server) *kratos.App {
 	return kratos.New(
-		kratos.ID(id+"user-api.api"),
+		kratos.ID(id+"user-rpc-rpc-api.api"),
 		kratos.Name(Name),
 		kratos.Version(Version),
 		kratos.Metadata(map[string]string{}),

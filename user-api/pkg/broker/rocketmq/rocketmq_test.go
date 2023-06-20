@@ -9,14 +9,14 @@ import (
 	"syscall"
 	"testing"
 	"time"
-	broker2 "user-api-job/pkg/broker"
 	"user-job/pkg/tracing"
+	broker2 "user-rpc-rpc-api-user-rpc-job/pkg/broker"
 
 	"github.com/go-kratos/kratos/v2/log"
 
 	"github.com/stretchr/testify/assert"
 
-	api "user-api-job/internal/pkg/_example/api/manual"
+	api "user-rpc-rpc-api-user-rpc-job/internal/pkg/_example/api/manual"
 )
 
 const (

@@ -144,19 +144,19 @@ func file_conf_conf_proto_rawDescGZIP() []byte {
 
 var file_conf_conf_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_conf_conf_proto_goTypes = []interface{}{
-	(*Bootstrap)(nil), // 0: user-api.job.conf.Bootstrap
-	(*Server)(nil),    // 1: user-api.job.conf.Server
-	(*Data)(nil),      // 2: user-api.job.conf.Data
-	(*Tracer)(nil),    // 3: user-api.job.conf.Tracer
-	(*Logger)(nil),    // 4: user-api.job.conf.Logger
-	(*Registry)(nil),  // 5: user-api.job.conf.Registry
+	(*Bootstrap)(nil), // 0: user-rpc-rpc-api.user-rpc-job.conf.Bootstrap
+	(*Server)(nil),    // 1: user-rpc-rpc-api.user-rpc-job.conf.Server
+	(*Data)(nil),      // 2: user-rpc-rpc-api.user-rpc-job.conf.Data
+	(*Tracer)(nil),    // 3: user-rpc-rpc-api.user-rpc-job.conf.Tracer
+	(*Logger)(nil),    // 4: user-rpc-rpc-api.user-rpc-job.conf.Logger
+	(*Registry)(nil),  // 5: user-rpc-rpc-api.user-rpc-job.conf.Registry
 }
 var file_conf_conf_proto_depIdxs = []int32{
-	1, // 0: user-api.job.conf.Bootstrap.server:type_name -> user-api.job.conf.Server
-	2, // 1: user-api.job.conf.Bootstrap.data:type_name -> user-api.job.conf.Data
-	3, // 2: user-api.job.conf.Bootstrap.tracer:type_name -> user-api.job.conf.Tracer
-	4, // 3: user-api.job.conf.Bootstrap.logger:type_name -> user-api.job.conf.Logger
-	5, // 4: user-api.job.conf.Bootstrap.registry:type_name -> user-api.job.conf.Registry
+	1, // 0: user-rpc-rpc-api.user-rpc-job.conf.Bootstrap.server:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Server
+	2, // 1: user-rpc-rpc-api.user-rpc-job.conf.Bootstrap.data:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Data
+	3, // 2: user-rpc-rpc-api.user-rpc-job.conf.Bootstrap.tracer:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Tracer
+	4, // 3: user-rpc-rpc-api.user-rpc-job.conf.Bootstrap.logger:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Logger
+	5, // 4: user-rpc-rpc-api.user-rpc-job.conf.Bootstrap.registry:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Registry
 	5, // [5:5] is the sub-list for method output_type
 	5, // [5:5] is the sub-list for method input_type
 	5, // [5:5] is the sub-list for extension type_name

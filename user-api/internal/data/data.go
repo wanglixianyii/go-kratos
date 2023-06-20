@@ -1,8 +1,9 @@
 package data
 
 import (
-	userV1 "user-api/api/service/user-api/v1"
-	"admin/internal/conf"
+	userV1 "user-api/api/service/user-rpc/v1"
+	"user-api/internal/conf"
+
 	"context"
 	"github.com/go-kratos/kratos/contrib/registry/consul/v2"
 	"github.com/go-kratos/kratos/v2/log"

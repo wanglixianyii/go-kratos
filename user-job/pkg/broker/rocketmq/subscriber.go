@@ -3,7 +3,7 @@ package rocketmq
 import (
 	aliyun "github.com/aliyunmq/mq-http-go-sdk"
 	"sync"
-	broker2 "user-api-job/pkg/broker"
+	broker2 "user-rpc-rpc-api-user-rpc-job/pkg/broker"
 )
 
 type subscriber struct {

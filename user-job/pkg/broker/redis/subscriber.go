@@ -3,7 +3,7 @@ package redis
 import (
 	"errors"
 	"time"
-	broker2 "user-api-job/pkg/broker"
+	broker2 "user-rpc-rpc-api-user-rpc-job/pkg/broker"
 
 	"github.com/go-kratos/kratos/v2/encoding"
 	"github.com/go-kratos/kratos/v2/log"

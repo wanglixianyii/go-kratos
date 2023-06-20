@@ -45,7 +45,7 @@ docker run -itd \
     -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092 \
     -e KAFKA_ZOOKEEPER_CONNECT=zookeeper-test:2181 \
     -e ALLOW_PLAINTEXT_LISTENER=yes \
-    --user-api root \
+    --user-rpc-rpc-api root \
     bitnami/kafka:latest
 ```
 

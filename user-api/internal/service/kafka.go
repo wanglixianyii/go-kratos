@@ -1,13 +1,13 @@
 package service
 
 import (
-	v1 "user-api/api/job/v1"
-	svcV1 "user-api/api/service/job/v1"
 	"admin/internal/biz"
 	"context"
 	"fmt"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/tx7do/kratos-transport/broker"
+	v1 "user-api/api/job/v1"
+	svcV1 "user-api/api/service/job/v1"
 )
 
 type LoggerJobService struct {
@@ -20,7 +20,7 @@ type LoggerJobService struct {
 func NewLoggerJobService(uc *biz.KafkaUseCase, logger log.Logger) *LoggerJobService {
 	return &LoggerJobService{
 		uc:  uc,
-		log: log.NewHelper(log.With(logger, "module", "service/logger-job"))}
+		log: log.NewHelper(log.With(logger, "module", "service/logger-user-rpc-job"))}
 }
 
 func (s *LoggerJobService) InsertSensor(ctx context.Context, topic string, headers broker.Headers, msg *svcV1.Sensor) error {

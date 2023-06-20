@@ -246,17 +246,17 @@ func file_conf_server_proto_rawDescGZIP() []byte {
 
 var file_conf_server_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_conf_server_proto_goTypes = []interface{}{
-	(*Server)(nil),              // 0: user-api.job.conf.Server
-	(*Server_GRPC)(nil),         // 1: user-api.job.conf.Server.GRPC
-	(*Server_RocketMQ)(nil),     // 2: user-api.job.conf.Server.RocketMQ
+	(*Server)(nil),              // 0: user-rpc-rpc-api.user-rpc-job.conf.Server
+	(*Server_GRPC)(nil),         // 1: user-rpc-rpc-api.user-rpc-job.conf.Server.GRPC
+	(*Server_RocketMQ)(nil),     // 2: user-rpc-rpc-api.user-rpc-job.conf.Server.RocketMQ
 	(*durationpb.Duration)(nil), // 3: google.protobuf.Duration
-	(*Middleware)(nil),          // 4: user-api.job.conf.Middleware
+	(*Middleware)(nil),          // 4: user-rpc-rpc-api.user-rpc-job.conf.Middleware
 }
 var file_conf_server_proto_depIdxs = []int32{
-	1, // 0: user-api.job.conf.Server.grpc:type_name -> user-api.job.conf.Server.GRPC
-	2, // 1: user-api.job.conf.Server.rocketmq:type_name -> user-api.job.conf.Server.RocketMQ
-	3, // 2: user-api.job.conf.Server.GRPC.timeout:type_name -> google.protobuf.Duration
-	4, // 3: user-api.job.conf.Server.GRPC.middleware:type_name -> user-api.job.conf.Middleware
+	1, // 0: user-rpc-rpc-api.user-rpc-job.conf.Server.grpc:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Server.GRPC
+	2, // 1: user-rpc-rpc-api.user-rpc-job.conf.Server.rocketmq:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Server.RocketMQ
+	3, // 2: user-rpc-rpc-api.user-rpc-job.conf.Server.GRPC.timeout:type_name -> google.protobuf.Duration
+	4, // 3: user-rpc-rpc-api.user-rpc-job.conf.Server.GRPC.middleware:type_name -> user-rpc-rpc-api.user-rpc-job.conf.Middleware
 	4, // [4:4] is the sub-list for method output_type
 	4, // [4:4] is the sub-list for method input_type
 	4, // [4:4] is the sub-list for extension type_name

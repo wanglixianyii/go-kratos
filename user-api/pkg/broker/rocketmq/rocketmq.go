@@ -6,8 +6,8 @@ import (
 	"github.com/apache/rocketmq-client-go/v2"
 	"github.com/apache/rocketmq-client-go/v2/rlog"
 	"sync"
-	broker2 "user-api-job/pkg/broker"
 	"user-job/pkg/tracing"
+	broker2 "user-rpc-rpc-api-user-rpc-job/pkg/broker"
 
 	"go.opentelemetry.io/otel/attribute"
 	semConv "go.opentelemetry.io/otel/semconv/v1.12.0"

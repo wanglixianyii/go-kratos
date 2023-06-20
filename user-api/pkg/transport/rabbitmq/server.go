@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"strings"
 	"sync"
-	broker2 "user-api-job/pkg/broker"
 	"user-job/pkg/broker/rabbitmq"
+	broker2 "user-rpc-rpc-api-user-rpc-job/pkg/broker"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/transport"

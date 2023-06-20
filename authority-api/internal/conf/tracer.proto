@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package authority.conf;
 
-option go_package = "authority-api/internal/conf;conf";
+option go_package = "authority-rpc-api-api/internal/conf;conf";
 
 // 链路追踪
 message Tracer {

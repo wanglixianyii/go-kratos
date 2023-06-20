@@ -7,8 +7,8 @@ import (
 	"user-job/internal/biz"
 	"user-job/pkg/broker"
 
-	pb "user-api-job/api/job/v1"
-	v1 "user-api-job/api/service/user-api/v1"
+	v1 "user-rpc-rpc-api-user-rpc-job/api/service/user-rpc-rpc-api/v1"
+	pb "user-rpc-rpc-api-user-rpc-job/api/user-rpc-job/v1"
 )
 
 type UserService struct {
@@ -20,7 +20,7 @@ type UserService struct {
 func NewUserService(uc *biz.UserUseCase, logger log.Logger) *UserService {
 	return &UserService{
 		uc:  uc,
-		log: log.NewHelper(log.With(logger, "module", "service/user-api")),
+		log: log.NewHelper(log.With(logger, "module", "service/user-rpc-rpc-api")),
 	}
 }
 

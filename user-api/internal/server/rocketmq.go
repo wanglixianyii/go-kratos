@@ -1,11 +1,11 @@
 package server
 
 import (
-	"admin/internal/conf"
-	"admin/internal/service"
 	"context"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/tx7do/kratos-transport/transport/rocketmq"
+	"user-api/internal/conf"
+	"user-api/internal/service"
 )
 
 func NewRocketmqServer(c *conf.Server, svc *service.LoggerJobService, _ log.Logger) *rocketmq.Server {

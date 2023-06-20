@@ -6,18 +6,17 @@ import (
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/registry"
-	"github.com/go-kratos/kratos/v2/transport/grpc"
-
+	"github.com/go-kratos/kratos/v2/transport/http"
 	_ "go.uber.org/automaxprocs"
 )
 
 var Service = bootstrap.NewServiceInfo(
-	service.RpcAuthorityService,
+	service.AuthorityApiService,
 	"1.0.0",
 	"",
 )
 
-func newApp(logger log.Logger, gs *grpc.Server, rr registry.Registrar) *kratos.App {
+func newApp(logger log.Logger, hs *http.Server, rr registry.Registrar) *kratos.App {
 	return kratos.New(
 		kratos.ID(Service.GetInstanceId()),
 		kratos.Name(Service.Name),
@@ -25,7 +24,7 @@ func newApp(logger log.Logger, gs *grpc.Server, rr registry.Registrar) *kratos.A
 		kratos.Metadata(Service.Metadata),
 		kratos.Logger(logger),
 		kratos.Server(
-			gs,
+			hs,
 		),
 		kratos.Registrar(rr),
 	)
